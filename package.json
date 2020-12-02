@@ -1,0 +1,11 @@
+{
+  "name": "com.mstephens.sharpchess",
+  "version": "1.0.0",
+  "displayName": "SharpChess",
+  "description": "C# chess engine.",
+  "unity": "2019.4",
+  "author": {
+    "name": "Michael Stephens",
+    "email": "mstephens.dev@gmail.com"
+  }
+}
