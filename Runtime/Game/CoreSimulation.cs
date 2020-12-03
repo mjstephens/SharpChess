@@ -1,21 +1,21 @@
 namespace SharpChess
 {
-    public class Brain
+    public class CoreSimulation
     {
         #region Variables
 
-        private readonly IGame _game;
         private readonly IBoard _board;
+        private readonly IClientSimulation _clientSim;
 
         #endregion Variables
 
 
         #region Constructor
 
-        public Brain(IGame game, IBoard board)
+        public CoreSimulation(IBoard board, IClientSimulation clientSim)
         {
-            _game = game;
             _board = board;
+            _clientSim = clientSim;
         }
 
         #endregion Constructor
@@ -30,7 +30,7 @@ namespace SharpChess
 
         public void DoClientAttemptPieceMove(IPiece piece, ISquare targetSquare)
         {
-            
+            _clientSim.DoPieceMoveValid(piece, targetSquare);
         }
 
         #endregion Update

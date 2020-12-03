@@ -2,8 +2,8 @@ namespace SharpChess
 {
     public interface IPiece
     {
-        // Properties
-        
+        #region Properties
+
         /// <summary>
         /// The square at which this piece currently resides (null if taken)
         /// </summary>
@@ -23,5 +23,18 @@ namespace SharpChess
         /// The team to which this piece belongs
         /// </summary>
         int Team { get; }
+
+        #endregion Properties
+
+
+        #region Methods
+
+        /// <summary>
+        /// Directs the client piece to move to the given square
+        /// </summary>
+        /// <param name="square"></param>
+        void MovePieceToSquare(ISquare square);
+
+        #endregion Methods
     }
 }
