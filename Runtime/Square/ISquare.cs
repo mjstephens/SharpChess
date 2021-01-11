@@ -1,17 +1,30 @@
-using Data;
 
 namespace SharpChess
 {
+    /// <summary>
+    /// Client interface for squares
+    /// </summary>
     public interface ISquare
     {
+        #region Properties
+
         /// <summary>
-        /// The grid layout position this square occupies on the board
+        /// We use this for easy access to the Square class from ISquare
         /// </summary>
-        DataBoardPosition Position { get; }
+        int id { get; set;  }
+
+        #endregion Properties
         
+        
+        #region Methods
+
         /// <summary>
-        /// The piece currently occupying this square - null if empty
+        /// Squares can be pinged for a variety of reasons
         /// </summary>
-        IPiece CurrentPiece { get; set; }
+        /// <param name="type"></param>
+        void PingSquare(SquarePingType type);
+
+        #endregion Methods
+
     }
 }

@@ -5,25 +5,30 @@ namespace SharpChess
     /// </summary>
     public interface IClientSimulation
     {
-        /// <summary>
-        /// Directs the client that the piece that was trying to move was moving to an invalid square.
-        /// </summary>
-        /// <param name="piece"></param>
-        /// <param name="square"></param>
-        void DoPieceMoveInvalid(IPiece piece, ISquare square);
-        
-        /// <summary>
-        /// Directs the client that the moving piece can continue and actually move.
-        /// </summary>
-        /// <param name="piece"></param>
-        /// <param name="square"></param>
-        void DoPieceMoveValid(IPiece piece, ISquare square);
-        
-        /// <summary>
-        /// Directs the client that a piece has been captured.
-        /// </summary>
-        /// <param name="capturedPiece"></param>
-        /// <param name="attackingPiece"></param>
-        void DoPieceCaptured(IPiece capturedPiece, IPiece attackingPiece);
+        // /// <summary>
+        // /// 
+        // /// </summary>
+        // /// <param name="square"></param>
+        // /// <param name="type"></param>
+        // void DoPingSquare(ISquare square, SquarePingType type);
+        //
+        // /// <summary>
+        // /// 
+        // /// </summary>
+        // /// <param name="valid"></param>
+        // /// <param name="data"></param>
+        // void DoPieceMoveValidationResult(bool valid, MoveData data);
+        //
+        // /// <summary>
+        // /// Directs the client that a piece has been captured.
+        // /// </summary>
+        // /// <param name="capturedPiece"></param>
+        // /// <param name="attackingPiece"></param>
+        // void DoPieceCaptured(IPiece capturedPiece, IPiece attackingPiece);
+    }
+
+    public enum SquarePingType
+    {
+        Test
     }
 }

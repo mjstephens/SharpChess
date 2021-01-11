@@ -5,28 +5,13 @@ namespace SharpChess
         #region Properties
 
         /// <summary>
-        /// The square at which this piece currently resides (null if taken)
+        /// We use this for easy access to the Piece class from IPiece
         /// </summary>
-        ISquare CurrentSquare { get; }
-        
-        /// <summary>
-        /// Defines how the piece can move across squares
-        /// </summary>
-        DataMoveRuleBase[] MovementRules { get; }
-        
-        /// <summary>
-        /// Special movement properties for this piece
-        /// </summary>
-        DataMovementProperties MovementProperties { get; }
-        
-        /// <summary>
-        /// The team to which this piece belongs
-        /// </summary>
-        int Team { get; }
+        int id { get; set; }
 
         #endregion Properties
-
-
+        
+        
         #region Methods
 
         /// <summary>

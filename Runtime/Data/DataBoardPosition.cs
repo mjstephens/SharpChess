@@ -1,4 +1,4 @@
-namespace Data
+namespace SharpChess
 {
     public struct DataBoardPosition
     {
